@@ -24,7 +24,7 @@
 		canvas.width = W;
 		canvas.height = H;
 		//每个文字的字体大小
-		var fontSize = 12;
+		var fontSize = 16;
 		//计算列
 		var colunms = Math.floor(W /fontSize);	
 		//记录每列文字的y轴坐标
@@ -43,8 +43,9 @@
 			context.fillRect(0,0,W,H);
 			//给字体设置样式
 			context.font = "700 "+fontSize+"px  微软雅黑";
-			//给字体添加颜色
+			let color=["#00cc33","#f00"];
 			context.fillStyle ="#00cc33";//可以rgb,hsl, 标准色，十六进制颜色
+			//给字体添加颜色
 			//写入画布中
 			for(var i=0;i<colunms;i++){
 				var index = Math.floor(Math.random() * str.length);
