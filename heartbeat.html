@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.heart{
+			height: 200px;
+			width: 200px;
+			margin:0 auto;
+			margin-top: 30px;
+			position: relative;
+			animation: beat .8s infinite; 
+		}
+		.heart:before,.heart:after{
+			content: '';
+			position: absolute;
+			height: 150px;
+			width: 100px;
+			background: #f00;
+			margin-top:50%;
+			top:-75px;
+			margin-left: 50%;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
+		}
+
+		.heart:before{
+			left:-70px;
+			transform: rotate(-45deg);
+		}
+		.heart:after{
+			right:34px;
+			transform: rotate(45deg);
+		}
+		@keyframes beat{
+			from{transform: scale(.7);}
+			to{transform: scale(1);}
+		}
+	</style>
+</head>
+<body>
+	<div class="heart"></div>
+</body>
+</html>
